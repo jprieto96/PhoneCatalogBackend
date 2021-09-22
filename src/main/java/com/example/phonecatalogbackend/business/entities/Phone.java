@@ -35,4 +35,8 @@ public class Phone {
         this.ram = ram;
     }
 
+    public Phone toTransfer() {
+        return new Phone(id, name, manufacturer, description, color, price, imageFileName, screen, processor, ram);
+    }
+
 }
