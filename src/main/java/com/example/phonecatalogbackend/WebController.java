@@ -1,7 +1,7 @@
 package com.example.phonecatalogbackend;
 
 import com.example.phonecatalogbackend.business.phone.SAPhone;
-import com.example.phonecatalogbackend.business.phone.TPhone;
+import com.example.phonecatalogbackend.business.pojos.TPhone;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,6 +49,11 @@ public class WebController {
         log.debug("Phone created successfully: {}", newPhone);
 
         return new Gson().toJson(newPhone);
+    }
+
+    @RequestMapping(path = "/")
+    public String hello() {
+        return "Hello";
     }
 
 
